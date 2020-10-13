@@ -3,7 +3,7 @@
 
 //Less variables
 
-@primary-black: rgb(16, 16, 16);
+@primary: rgb(0, 35, 49);
 
 //Less files import
 @import "./less/header.less";
@@ -19,6 +19,112 @@
 
 .App, html {
   font-family: 'Inter', sans-serif;
-  background-color: @primary-black;
+  background-color: white;
   min-height: 100vh;
+}
+
+
+
+
+h1{
+  margin: .25em 0;
+}
+h1{
+  margin: .125em 0;
+}
+
+.wrapper{
+  /*
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  */
+  margin: 0 auto;
+  min-width: 250px;
+  width: 100%;
+  max-width: 700px;
+  padding: 16px;
+}
+
+/* LIST */
+
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+ul{
+  padding: 8px;
+  border-radius: 8px;
+  background: #fff;
+}
+li{
+  border-bottom: 1px solid #aaa;
+  overflow: hidden;
+}
+li:last-child{
+  border-bottom: none;
+}
+
+button {
+  visibility: hidden;
+}
+button .fa-times{
+  color: red;
+}
+button .fa-check{
+  color: green;
+}
+
+/* SWIPE */
+.swipe-container{
+  position: relative;
+  background-color: lightgray;
+}
+.reveal-left, .reveal-right{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 8px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.reveal-right{
+  background-color: red;
+  right: 0;
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
+.swipe-item{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 16px 0;
+  background-color: white;
+  z-index: 2;
+  user-select: none;
+}
+.swipe-item > button, .swipe-item > span {
+  padding: 8px;
+  font-size: 30px;
+}
+.swipe-item > button {
+  margin: 0 8px;
+  background: transparent;
+  border: 0;
+  outline: none;
+}
+.swipe-item > span {
+  flex: 1;
 }
